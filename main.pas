@@ -109,12 +109,12 @@ begin
   istGefunden := true;
   end
   else
-  if (zahlen[pivot] > zuSuchen)  then
+  if (zahlen[pivot] > zuSuchen) AND (links <= rechts)  then
   begin
     pivot := pivot-1;
     binaereSuche(links, pivot, zuSuchen);
   end
-  else if (zahlen[pivot] < zuSuchen)  then
+  else if (zahlen[pivot] < zuSuchen) AND (links <= rechts)  then
   begin
     pivot:=pivot+1;
     binaereSuche(pivot, rechts, zuSuchen);
